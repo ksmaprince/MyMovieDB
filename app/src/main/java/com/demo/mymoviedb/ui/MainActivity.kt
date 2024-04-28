@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
 
         binding.rvMovie.layoutManager = GridLayoutManager(this, 2)
         binding.rvMovie.adapter = adapter
-
         viewModel.fetchAllMovies("f6c06b6a1cc549d810d4fb194b9d7633", 1)
         viewModel.movies.observe(this@MainActivity, Observer {
             adapter.movieInfos = it.results
